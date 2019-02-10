@@ -1,0 +1,29 @@
+{
+  "name": "mycallback.co",
+  "version": "1.0.0",
+  "description": "The app lets you take calls and assist customers via chat through a widget on your website.",
+  "main": "index.js",
+  "repository": "https://bitbucket.org/onelastjedi/mycallback.to/src",
+  "author": "Anton Komarenko <mi3ta@sent.as>",
+  "license": "LicenseRef-LICENSE",
+  "private": true,
+  "scripts": {
+    "start": "webpack-dev-server --mode development --history-api-fallback --inline --progress",
+    "build": "webpack --mode production"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.2.2",
+    "@babel/preset-env": "^7.3.1",
+    "babel-loader": "^8.0.5",
+    "css-loader": "^2.1.0",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
+    "html-webpack-plugin": "^3.2.0",
+    "node-sass": "^4.11.0",
+    "sass-loader": "^7.1.0",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.29.3",
+    "webpack-cli": "^3.2.3",
+    "webpack-dev-server": "^3.1.14"
+  },
+  "dependencies": {}
+}
