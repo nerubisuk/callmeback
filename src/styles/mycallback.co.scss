@@ -1,0 +1,64 @@
+@import 'reset';
+
+.wrapper {
+  display: block;
+}
+
+.icon_phone, 
+.icon_close, 
+.icon_phone_hidden, 
+.icon_close_hidden  {
+  fill: #fc5b5d;
+  z-index: 1;
+  width: 40px;
+  height: 40px;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transition: transform .3s ease-out;
+}
+
+.icon_phone_hidden {
+  transition: transform .3s ease-out;
+  transform: translateY(-100px);
+}
+
+.icon_close_visible {
+  transition: transform .3s ease-out;
+  transform: translateY(0px)!important;
+}
+
+.icon_close_hidden {
+  transition: transform .3s ease-out;
+  transform: translateY(100px);
+}
+
+.phone_button {
+  position: fixed;
+  overflow: hidden;
+  bottom: 20px;
+  right: 20px;
+  align-items: center;
+  justify-items: center;
+  border-radius: 50%;
+  background: red;
+  width: 60px;
+  height: 60px;
+  z-index: 9998;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 
+    0 3px 1px -2px rgba(0,0,0,0.12), 
+    0 1px 5px 0 rgba(0,0,0,0.2);
+  cursor: pointer;
+}
+
+
+.jammer {
+  z-index: 9999;
+  position: absolute;
+  width: inherit;
+  height: inherit;
+}
