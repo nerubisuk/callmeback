@@ -1,0 +1,17 @@
+image: wearemieta/alpine-node-aws-cli
+
+pipelines:
+  default:
+    - step:
+        deployment: production
+        caches: 
+          - node 
+        script:
+          # Installs dependencies
+          - npm install
+
+          # Builds app
+          - npm run build
+          
+          # Deploys to AWS S3 bucket 
+          - aws s3 sync --delete dist/ s3://mycallback.co
