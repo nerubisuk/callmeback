@@ -1,0 +1,62 @@
+$smooth: cubic-bezier(0.17, 0.67, 0.48, 1.28);
+
+@mixin accelerate($name) {
+  will-change: $name;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  perspective: 1000px;
+ }
+
+ @keyframes slideInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(4vh)
+ }
+
+ 25% {
+  opacity: .25;
+  transform: translateY(3vh);
+ }
+ 
+  50% {
+    opacity: .5;
+    transform: translateY(2vh);
+ }
+
+ 75% {
+  opacity: .75;
+  transform: translateY(1vh);
+ }
+
+ 100% {
+  transform: translateY(0);
+  opacity: 1;
+ }
+}
+
+@keyframes slideOutDown {
+  0% {
+   transform: translateY(0);
+   opacity: 1;
+ }
+
+ 25% {
+  opacity: .75;
+  transform: translateY(1vh);
+ }
+ 
+  50% {
+  opacity: .5;
+  transform: translateY(2vh);
+ }
+
+ 75% {
+  opacity: .25;
+  transform: translateY(3vh);
+ }
+
+ 100% {
+  opacity: 0;
+  transform: translateY(4vh);
+ }
+}
