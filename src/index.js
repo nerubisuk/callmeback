@@ -66,16 +66,21 @@ class Widget {
     this.isOpen = !this.isOpen;
 
     const phone = document.querySelector(`.${styles.icon_phone}`),
-      close = document.querySelector(`.${styles.icon_close_hidden}`);
+      close = document.querySelector(`.${styles.icon_close_hidden}`),
+      chat = document.querySelector(`.${styles.chat_window}`);
 
     phone.classList.toggle(styles.icon_phone_hidden);
     close.classList.toggle(styles.icon_close_visible);
+
+    this.isOpen 
+      ? chat.classList.add(styles.chat_window_visible) 
+      : chat.classList.replace(styles.chat_window_visible, styles.chat_window_hidden);
   }
 }
 
 const html = `
   <div class=${styles.wrapper}>
-    <div class=${styles.phone_button}>
+    <button class=${styles.phone_button}>
       <div class=${styles.jammer}></div>
         <svg class=${styles.icon_phone} viewBox="0 0 183 183">
           <path d="M91.5 0C40.9691 0 0 40.9691 0 91.5C0 142.031 40.9691 183 91.5 183C142.031 183 183 142.031 183 91.5C183 40.9691 142.031 0 91.5 0ZM117.768 135.931C89.6776 148.771 46.0855 64.0271 73.5431 49.7074L81.5722 45.75L94.8855 71.7436L86.9403 75.6552C78.5909 80.1311 95.9759 114.085 104.516 109.945L112.385 106.094L125.805 131.996L117.768 135.931V135.931Z" />
@@ -83,6 +88,27 @@ const html = `
         <svg class=${styles.icon_close_hidden} xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path d="M12 0c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm4.597 17.954l-4.591-4.55-4.555 4.596-1.405-1.405 4.547-4.592-4.593-4.552 1.405-1.405 4.588 4.543 4.545-4.589 1.416 1.403-4.546 4.587 4.592 4.548-1.403 1.416z"/>
         </svg>
+    </button>
+
+    <div class="${styles.chat_window}">
+      <div class=${styles.chat_window_header}>
+        <div class=${styles.face}>
+          <img src="https://randomuser.me/api/portraits/women/26.jpg" />
+        </div>
+        <div>
+          <p>High Five Lab</p>
+          <span>I will gladly get back to you :)</span>
+        </div>
+      </div>
+      <div class=${styles.call_me}>
+        <h1>Enter your phone number</h1>
+        <p>And I will call you back in 28 seconds</p>
+        <form> 
+          <input type="text" />
+          <button type="submit">Call me</button>
+        </form>
+        <span>Or choose convinient time for call</span>
+      </div>
     </div>
   </div>
 `;
