@@ -1,14 +1,20 @@
 @import 'reset';
+@import 'colors';
+@import 'animations';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
 
 .wrapper {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
   display: block;
+  font: 100% 'Roboto', sans-serif;
 }
 
 .icon_phone, 
 .icon_close, 
 .icon_phone_hidden, 
 .icon_close_hidden  {
-  fill: #fc5b5d;
+  fill: $basic-red;
   z-index: 1;
   width: 40px;
   height: 40px;
@@ -23,7 +29,7 @@
 
 .icon_phone_hidden {
   transition: transform .3s ease-out;
-  transform: translateY(-100px);
+  transform: translateY(-100px) rotate(270deg);
 }
 
 .icon_close_visible {
@@ -33,32 +39,167 @@
 
 .icon_close_hidden {
   transition: transform .3s ease-out;
-  transform: translateY(100px);
+  transform: translateY(100px) rotate(270deg);
 }
 
 .phone_button {
   position: fixed;
   overflow: hidden;
+  padding: 0;
   bottom: 20px;
   right: 20px;
   align-items: center;
   justify-items: center;
   border-radius: 50%;
-  background: red;
   width: 60px;
   height: 60px;
-  z-index: 9998;
+  z-index: 2147483001!important;
   background-color: #fff;
-  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.14), 
-    0 3px 1px -2px rgba(0,0,0,0.12), 
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 
+    0 3px 1px -2px rgba(0,0,0,0.10), 
     0 1px 5px 0 rgba(0,0,0,0.2);
   cursor: pointer;
+  border: 1px solid rgba($light-grey, .13);
 }
-
 
 .jammer {
   z-index: 9999;
   position: absolute;
+  top: 0;
+  bottom: 0;
   width: inherit;
   height: inherit;
+}
+
+.chat_window {
+  box-shadow: 0 5px 40px rgba(0,0,0,.16)!important;
+  border-radius: 8px!important;
+  overflow: hidden!important;
+  width: 325px!important;
+  min-height: 250px!important;
+  max-height: 704px!important;
+  height: calc(100% - 20px - 80px - 20px);
+  bottom: calc(20px + 80px);
+  right: 20px;
+  position: fixed!important;
+  opacity: 0!important;
+  @include accelerate(transform);
+}
+
+.chat_window_hidden {
+  opacity: 0!important;
+  transform: translateY(20vh);
+  animation: slideOutDown .25s ease;
+  z-index: 0!important;
+}
+
+.chat_window_visible {
+  opacity: 1!important;
+  z-index: 2147483000!important;
+  transform: translateY(0);
+  animation: slideInUp .25s ease;
+}
+
+.chat_window_header {
+  height: 78px;
+  background-color: $basic-red;
+  box-shadow: 0 2px 2px $transparent-red;
+  padding: 13px 30px;
+  color: $flat-white;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 15px;
+  align-items: center;
+  background: $basic-red-gradient;
+
+  p {
+    font-weight: 900;
+    font-size: 130%;
+    margin-bottom: 1px;
+  }
+
+  span {
+    font-size: 80%;
+    opacity: .9;
+  }
+}
+
+.face {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 1px 1px $dark-grey;
+  
+  img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.call_me {
+  padding: 25px 35px;
+  text-align: center;
+
+  h1 {
+    color: $middle-grey;
+    line-height: 1.5;
+    font-size: 135%;
+    font-weight: 600;
+  }
+
+  p {
+    color: $light-grey;
+    line-height: 1.5;
+    font-size: 90%;
+  }
+
+  span {
+    color: $light-grey;
+    line-height: 1.5;
+    font-size: 80%;
+    border-bottom: 1px dashed rgba($light-grey, .4);
+    cursor: pointer;
+  }
+
+  form {
+    padding: 30px 0 10px ;
+
+    button {
+      border-radius: 5px;
+      background: $basic-red-gradient;
+      padding: 10px 30px;
+      width: 70%;
+      margin: 0 auto;
+      font-weight: 500;
+      color: $flat-white;
+      font-size: 97%;
+      display: block;
+      margin-top: 40px;
+      box-shadow: 0 1px 3px #6d020291;
+    }
+
+    input[type=text] {
+      display: block;
+      height: 45px;
+      margin: 0;
+      color: inherit;
+      width: 100%;
+      font-family: inherit;
+      font-size: 100%;
+      font-weight: inherit;
+      border: none;
+      padding: 0 15px;
+      border-radius: 5px;
+      transition: box-shadow .3s;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+
+      &:focus {
+        outline: none;
+        box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.2);
+      }
+    }
+  }
 }
