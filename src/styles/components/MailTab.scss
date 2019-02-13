@@ -1,0 +1,61 @@
+@import '../colors'; 
+
+.wrapper {
+  h1 {
+    color: $middle-grey;
+    line-height: 1.5;
+    font-size: 135%;
+    font-weight: 600;
+  }
+
+  p {
+    color: $light-grey;
+    line-height: 1.5;
+    font-size: 90%;
+  }
+
+  span {
+    color: $light-grey;
+    line-height: 1.5;
+    font-size: 80%;
+    border-bottom: 1px dashed rgba($light-grey, .4);
+    cursor: pointer;
+  }
+
+  form {
+    input[type=text], textarea {
+      display: block;
+      height: 45px;
+      margin: 0 0 10px;
+      color: inherit;
+      width: 100%;
+      font-family: inherit;
+      font-size: 100%;
+      font-weight: inherit;
+      border: none;
+      padding: 0 15px;
+      border-radius: 5px;
+      border: 1px solid $simple-grey;
+    }
+
+    textarea {
+      resize: none;
+      padding: 15px;
+      height: 80px;
+    }
+
+    button {
+      border-radius: 5px;
+      background: $basic-red-gradient;
+      padding: 10px 30px;
+      width: 70%;
+      margin: 0 auto;
+      font-weight: 500;
+      color: $flat-white;
+      font-size: 97%;
+      display: block;
+      margin-top: 40px;
+      box-shadow: 0 1px 3px #6d020291;
+    }
+  }
+}
