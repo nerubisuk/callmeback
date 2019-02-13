@@ -27,7 +27,7 @@ class Widget {
           class: styles.phone_button,
           func: this.handleOpen
         } 
-      ]
+      ];
 
     evaluable.forEach(item => {
       Object.defineProperty(actions, item.class, {
