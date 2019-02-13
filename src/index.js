@@ -90,7 +90,8 @@ const html = `
         </svg>
     </button>
 
-    <div class="${styles.chat_window}">
+    <div class=${styles.chat_window}>
+
       <div class=${styles.chat_window_header}>
         <div class=${styles.face}>
           <img src="https://randomuser.me/api/portraits/women/26.jpg" />
@@ -100,6 +101,7 @@ const html = `
           <span>I will gladly get back to you :)</span>
         </div>
       </div>
+
       <div class=${styles.call_me}>
         <h1>Enter your phone number</h1>
         <p>And I will call you back in 28 seconds</p>
@@ -109,7 +111,25 @@ const html = `
         </form>
         <span>Or choose convinient time for call</span>
       </div>
-    </div>
+
+      <div class=${styles.chat_window_footer}>
+        <button>
+          <svg class=${styles.icon_phone} viewBox="0 0 183 183">
+            <path d="M91.5 0C40.9691 0 0 40.9691 0 91.5C0 142.031 40.9691 183 91.5 183C142.031 183 183 142.031 183 91.5C183 40.9691 142.031 0 91.5 0ZM117.768 135.931C89.6776 148.771 46.0855 64.0271 73.5431 49.7074L81.5722 45.75L94.8855 71.7436L86.9403 75.6552C78.5909 80.1311 95.9759 114.085 104.516 109.945L112.385 106.094L125.805 131.996L117.768 135.931V135.931Z" />
+          </svg>
+        </button>
+        <button>
+          <svg class=${styles.icon_messages} viewBox="0 0 183 183">
+            <path d="M0 91.5C0 40.9691 40.9691 0 91.5 0C142.031 0 183 40.9691 183 91.5C183 142.031 142.031 183 91.5 183C40.9691 183 0 142.031 0 91.5ZM129 67.7368V57H54V125H96.7326V114.263H54.8721V96.3684H129V85.6316H54.8721V67.7368H129Z" />
+          </svg>
+        </button>
+        <button>
+          <svg class=${styles.icon_mail} viewBox="0 0 24 24">
+            <path d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"/>
+          </svg>        
+        </button>
+      </div>
+      </div>
   </div>
 `;
 
