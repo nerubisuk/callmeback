@@ -26,7 +26,11 @@ class Widget {
         {
           class: styles.phone_button,
           func: this.handleOpen
-        } 
+        },
+        {
+          class: styles.mail_tab,
+          func: this.chooseMailTab
+        }
       ];
 
     evaluable.forEach(item => {
@@ -35,6 +39,10 @@ class Widget {
         writable: false
       });
     })
+  }
+
+  chooseMailTab() {
+    console.log('mail');
   }
 
   createElement(str) {
@@ -123,7 +131,8 @@ const html = `
             <path d="M0 91.5C0 40.9691 40.9691 0 91.5 0C142.031 0 183 40.9691 183 91.5C183 142.031 142.031 183 91.5 183C40.9691 183 0 142.031 0 91.5ZM129 67.7368V57H54V125H96.7326V114.263H54.8721V96.3684H129V85.6316H54.8721V67.7368H129Z" />
           </svg>
         </button>
-        <button>
+        <button class=${styles.mail_tab}>
+          <div class=${styles.jammer}></div>
           <svg class=${styles.icon_mail} viewBox="0 0 24 24">
             <path d="M12 .02c-6.627 0-12 5.373-12 12s5.373 12 12 12 12-5.373 12-12-5.373-12-12-12zm6.99 6.98l-6.99 5.666-6.991-5.666h13.981zm.01 10h-14v-8.505l7 5.673 7-5.672v8.504z"/>
           </svg>        
