@@ -1,0 +1,28 @@
+@import '../colors';
+
+.wrapper {
+  text-align: left;
+  position: relative;
+}
+
+.message {
+  max-width: 80%;
+  padding: 10px 12px!important;
+  border-radius: 5px;
+  color: $light-grey;
+  background-color: rgba(29,52,75,.07);
+}
+
+.input {
+  width: 100%;
+  background-color: rgba(29,52,75,.07);
+
+  textarea {
+    display: block;
+    width: inherit;
+    height: 40px;
+    border: 0;
+    resize: none;
+    background: transparent;
+  }
+}

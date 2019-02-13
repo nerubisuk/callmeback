@@ -1,0 +1,137 @@
+@import 'colors';
+@import 'animations';
+@import url('https://fonts.googleapis.com/css?family=Roboto:400,700');
+
+.wrapper {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font: 100% 'Roboto', sans-serif;
+
+  * {
+    box-sizing: border-box;
+  }
+
+  h1, h2, h3, h4, h5, h6, p {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+    text-decoration: none;
+  }
+  
+  button {
+    cursor: pointer;
+    border: 0;
+    background: none;
+  }
+  
+  :focus {
+    outline: 0;
+  }
+}
+
+.phone_button {
+  position: fixed;
+  overflow: hidden;
+  padding: 0;
+  bottom: 20px;
+  right: 20px;
+  align-items: center;
+  justify-items: center;
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  z-index: 2147483001!important;
+  background-color: #fff;
+  box-shadow: 0 2px 2px 0 rgba(0,0,0,0.12), 
+    0 3px 1px -2px rgba(0,0,0,0.10), 
+    0 1px 5px 0 rgba(0,0,0,0.2);
+
+  svg {
+    width: 40px;
+    height: 40px;
+    fill: $basic-red;
+  }
+}
+
+.chat_window {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 5px 40px rgba(0,0,0,.16)!important;
+  border-radius: 8px!important;
+  overflow: hidden!important;
+  width: 325px!important;
+  min-height: 250px!important;
+  max-height: 704px!important;
+  height: calc(100% - 20px - 80px - 20px);
+  bottom: calc(20px + 80px);
+  right: 20px;
+  position: fixed!important;
+  @include accelerate(transform);
+}
+
+.chat_window_header {
+  height: 78px;
+  background-color: $basic-red;
+  box-shadow: 0 2px 2px $transparent-red;
+  padding: 13px 30px;
+  color: $flat-white;
+  display: grid;
+  grid-template-columns: auto 1fr;
+  grid-column-gap: 15px;
+  align-items: center;
+  background: $basic-red-gradient;
+
+  p {
+    font-weight: 900;
+    font-size: 130%;
+    margin-bottom: 1px;
+  }
+
+  span {
+    font-size: 80%;
+    opacity: .9;
+  }
+}
+
+.face {
+  width: 50px;
+  height: 50px;
+  overflow: hidden;
+  border-radius: 50%;
+  box-shadow: 0 1px 1px $dark-grey;
+  
+  img {
+    width: 100%;
+    min-height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+.content {
+  padding: 20px;
+  text-align: center;
+  flex: 1;
+  overflow: auto;
+}
+
+.chat_window_footer {
+  border-top: 1px solid $simple-grey;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  bottom: 10px;
+  height: 80px;
+
+  svg {
+    width: 40px;
+    height: 40px;
+    fill: $basic-red;
+  }
+
+  button {
+    position: relative;
+  }
+}
