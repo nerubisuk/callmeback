@@ -31,7 +31,7 @@
 
 .icon_phone_hidden {
   transition: transform .3s ease-out;
-  transform: translateY(-100px) rotate(270deg);
+  transform: translateY(-100px);
 }
 
 .icon_close_visible {
@@ -41,7 +41,7 @@
 
 .icon_close_hidden {
   transition: transform .3s ease-out;
-  transform: translateY(100px) rotate(270deg);
+  transform: translateY(100px);
 }
 
 .phone_button {
