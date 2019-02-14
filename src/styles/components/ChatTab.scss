@@ -3,6 +3,14 @@
 .wrapper {
   text-align: left;
   position: relative;
+  height: inherit;
+  display: flex;
+  flex-direction: column;
+}
+
+.content {
+  flex: 1;
+  overflow: auto;
 }
 
 .message {
@@ -15,14 +23,32 @@
 
 .input {
   width: 100%;
+  padding: 15px 20px 0 20px;
+  height: 100px;
+  position: relative;
   background-color: rgba(29,52,75,.07);
+
+  button {
+    border-radius: 5px;
+    background-color: $basic-red!important;
+    height: 40px;
+    width: 100px;
+    max-width: 200px;
+    font-weight: 500;
+    color: $flat-white;
+    font-size: 97%;
+    display: block;
+  }
 
   textarea {
     display: block;
     width: inherit;
-    height: 40px;
+    height: 60px;
     border: 0;
     resize: none;
+    font-family: inherit;
+    font-size: 100%;
+    font-weight: inherit;
     background: transparent;
   }
 }

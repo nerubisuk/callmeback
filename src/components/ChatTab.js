@@ -11,6 +11,7 @@ class ChatTab extends React.Component {
       </div>
       <div className={styles.input}>
         <textarea placeholder="Compose your message" />
+        <button>Send</button>
       </div>
     </div>
   }
