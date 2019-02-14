@@ -7,8 +7,8 @@ import styles from './styles/mycallback.scss';
 
 class Widget extends React.Component {
   state = {
-    isOpen: true,
-    currentTab: 1,
+    isOpen: false,
+    currentTab: 0,
     tabs: [
       {
         header: {
