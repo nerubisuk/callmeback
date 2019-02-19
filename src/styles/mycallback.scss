@@ -136,4 +136,31 @@
   button {
     position: relative;
   }
+
+  .copyright {
+    position: absolute;
+    left: 0;
+    text-align: center;
+    right: 0;
+    margin: 0 auto;
+    bottom: 5px;
+    font-size: 9px;
+    text-indent: .1px;
+    color: rgba($light-grey, .7);
+
+    a {
+      color: rgba($light-grey, .7);
+      text-decoration: none;
+
+      &:hover {
+        border-bottom: 1px solid $simple-grey;
+      }
+    }
+
+    img {
+      width: 8px;
+      height: 8px;
+      vertical-align: text-top;
+    }
+  }
 }
