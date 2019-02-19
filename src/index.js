@@ -59,7 +59,7 @@ class Widget extends React.Component {
   render() {
     const { isOpen, tabs, currentTab } = this.state;
     
-    return <ReactFragment>
+    return <React.Fragment>
       {/* Open/close button */}
       <button 
         onClick={this.handleOpen}
@@ -114,7 +114,7 @@ class Widget extends React.Component {
           </button>
         </div>
       </div>}
-    </ReactFragment>;
+    </React.Fragment>;
   }
 }
 
