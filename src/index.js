@@ -115,6 +115,10 @@ class Widget extends React.Component {
               <path d="M22 0C9.8505 0 0 9.8505 0 22C0 34.1495 9.8505 44 22 44C34.1495 44 44 34.1495 44 22C44 9.8505 34.1495 0 22 0ZM32.7179 15.7949L22 23.1843L11.2821 15.7949H32.7179ZM32.7179 27.3333C32.7179 28.4379 31.8225 29.3333 30.7179 29.3333H13.2821C12.1775 29.3333 11.2821 28.4379 11.2821 27.3333V18.0513L22 25.3846L32.7179 18.0513V27.3333Z" />
             </svg>
           </button>
+          <p className={styles.copyright}>Powered by&nbsp;
+            <a href="https://mycallback.co">mycallback</a>&nbsp;
+            <img src="https://s.w.org/images/core/emoji/11/svg/1f512.svg" />
+          </p>
         </div>
       </div>}
     </React.Fragment>;
