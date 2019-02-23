@@ -1,6 +1,6 @@
 import React from 'react';
 import styles from '../styles/components/CallTab.scss';
-import axios from 'axios';''
+import axios from 'axios';
 import { 
   getUserID,
 } from '../utils/helpers-common';
@@ -35,7 +35,7 @@ class CallTab extends React.Component {
       url: this.state.url,
       data: bodyFormData,
       config: { 
-        headers: {'Content-Type': 'multipart/form-data' }
+        headers: {'Content-Type': 'application/x-www-form-urlencoded' }
       }
     })
   }
