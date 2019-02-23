@@ -7,7 +7,7 @@ import styles from './styles/mycallback.scss';
 
 class Widget extends React.Component {
   state = {
-    isOpen: false,
+    isOpen: true,
     currentTab: 0,
     tabs: [
       {
@@ -107,7 +107,7 @@ class Widget extends React.Component {
           </button>
           <button onClick={this.handleSelectTab.bind(this, 1)}>
             <svg width="44" height="44" viewBox="0 0 44 44" xmlns="http://www.w3.org/2000/svg">
-              <path fill-rule="evenodd" clip-rule="evenodd" d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84973 0 0 9.84974 0 22C0 34.1503 9.84973 44 22 44ZM14.6667 18.7692H29.8974V16.9231H14.6667V18.7692ZM14.6667 21.5385H29.8974V23.3846H14.6667V21.5385ZM14.6667 26.1538H22V28H14.6667V26.1538Z" />
+              <path fillRule="evenodd" clipRule="evenodd" d="M22 44C34.1503 44 44 34.1503 44 22C44 9.84974 34.1503 0 22 0C9.84973 0 0 9.84974 0 22C0 34.1503 9.84973 44 22 44ZM14.6667 18.7692H29.8974V16.9231H14.6667V18.7692ZM14.6667 21.5385H29.8974V23.3846H14.6667V21.5385ZM14.6667 26.1538H22V28H14.6667V26.1538Z" />
             </svg>
           </button> 
           <button onClick={this.handleSelectTab.bind(this, 2)}>
